@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1678127290 source:e:\zigzag\part2\task\task_2\multiplication table of a given number\main.c
+	<stdio.h>
+	<stdlib.h>
+

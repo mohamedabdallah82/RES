@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1678115556 source:e:\zigzag\part2\task\task_2\power of number\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
