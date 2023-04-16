@@ -3,17 +3,12 @@
 
 int main()
 {
-    int prime = 2 , num = 0;
+    int num = 0,result=1;
         printf("Enter a number: ");
         scanf("%d",&num);
-        printf("Factorials of a number %d is:\n",num);
-        while (num != 1){
-            if (num % prime == 0){
-                printf("%d\n",prime);
-                num /= prime;
-            }
-            else
-                prime++;
-        }
+        printf("Factorials of a number %d is: ",num);
+        while (num > 1)
+            result*=num--;
+        printf("%d",result);
     return 0;
 }
