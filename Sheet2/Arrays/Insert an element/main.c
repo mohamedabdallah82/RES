@@ -24,19 +24,18 @@ int main()
     printf("Enter the element position:\n");
     scanf("%d",&pos);
 
-    if(pos>0 && pos<=size+1)
+    if(pos > size+1 || pos <= 0)
+        printf("Invalid position! Please enter position between 1 to %d", size+1);
+    else{
         for(int i=size; i>=pos; i--)
             arr[i] = arr[i-1];
-    else
-        printf("Invalid position! Please enter position between 1 to %d", size+1);
 
-    arr[pos-1] = element;
-    size++;
-
-    printf("Array with insert element:\n");
-    for (int i=0 ; i<size ; i++)
-        printf("Arr[%d] = %d\n",i+1,arr[i]);
-
+        arr[pos-1] = element;
+        size++;
+        printf("Array with insert element:\n");
+        for (int i=0 ; i<size ; i++)
+            printf("Arr[%d] = %d\n",i+1,arr[i]);
+    }
 
     return 0;
 }
