@@ -22,6 +22,8 @@ char hexaKeys[ROWS][COLS] = {
 byte colPins[COLS] = {4, 5, 6};
 byte rowPins[ROWS] = {A3, A2, A1, A0};
 
+int i = 0;
+
 Keypad customKeypad = Keypad(makeKeymap(hexaKeys), rowPins, colPins, ROWS, COLS);
 
 void setup() {
@@ -35,5 +37,8 @@ void loop()
 
   if(button){
     lcd.print(button);
+    i++;
+    if(i > 16)lcd.scrollDisplayLeft();
   }
+  
 }
